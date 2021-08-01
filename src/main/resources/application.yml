@@ -7,3 +7,12 @@ spring:
       authentication-database: blog-platform
       username:
       password:
+
+blogInfo:
+  title: Оппачки
+  subtitle: кто это тут у нас?
+  phone: +38099148888
+  email: alakai20136@gmail.com
+  copyright: Алексей Сухилин
+  copyrightFrom: 2021
+
