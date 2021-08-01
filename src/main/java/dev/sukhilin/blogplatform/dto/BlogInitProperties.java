@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class BlogInitInfo {
+public class BlogInitProperties {
 
   private final String title;
   private final String subtitle;

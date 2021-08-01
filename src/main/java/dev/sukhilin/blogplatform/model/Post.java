@@ -40,5 +40,5 @@ public class Post {
 
   private List<Vote> votes = new ArrayList<>();
 
-  private List<String> tagIds = new ArrayList<>();
+  private List<String> tags = new ArrayList<>();
 }

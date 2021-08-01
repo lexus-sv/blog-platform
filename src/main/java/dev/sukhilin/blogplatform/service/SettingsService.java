@@ -1,6 +1,6 @@
 package dev.sukhilin.blogplatform.service;
 
-import dev.sukhilin.blogplatform.dto.BlogInitInfo;
+import dev.sukhilin.blogplatform.dto.BlogInitProperties;
 import dev.sukhilin.blogplatform.model.GlobalSetting;
 import dev.sukhilin.blogplatform.model.Setting;
 import dev.sukhilin.blogplatform.repository.SettingsRepository;
@@ -16,7 +16,7 @@ public class SettingsService {
 
   private final SettingsRepository settingsRepository;
 
-  private final BlogInitInfo blogInitInfo;
+  private final BlogInitProperties blogInitProperties;
 
   public SettingsService(
       SettingsRepository settingsRepository,
@@ -28,7 +28,7 @@ public class SettingsService {
       @Value("${blogInfo.copyrightFrom}") String copyrightFrom
   ) {
     this.settingsRepository = settingsRepository;
-    this.blogInitInfo = new BlogInitInfo(title, subtitle, phone, email, copyright, copyrightFrom);
+    this.blogInitProperties = new BlogInitProperties(title, subtitle, phone, email, copyright, copyrightFrom);
   }
 
   @PostConstruct
@@ -47,7 +47,7 @@ public class SettingsService {
         .collect(Collectors.toMap(GlobalSetting::getCode, GlobalSetting::isValue));
   }
 
-  public BlogInitInfo getBlogInitValues() {
-    return blogInitInfo;
+  public BlogInitProperties getBlogInitProperties() {
+    return blogInitProperties;
   }
 }
