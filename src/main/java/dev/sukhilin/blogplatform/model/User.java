@@ -1,5 +1,6 @@
 package dev.sukhilin.blogplatform.model;
 
+import dev.sukhilin.blogplatform.dto.UserDto;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
